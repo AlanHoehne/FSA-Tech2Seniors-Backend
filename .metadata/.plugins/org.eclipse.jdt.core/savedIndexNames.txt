@@ -69,6 +69,5 @@ INDEX VERSION 1.134+C:\Users\alanj\OneDrive\Área de Trabalho\SprnMaven\.metadata
 569954162.index
 2312561882.index
 3111596740.index
-3316578462.index
 3503039255.index
 382702735.index
