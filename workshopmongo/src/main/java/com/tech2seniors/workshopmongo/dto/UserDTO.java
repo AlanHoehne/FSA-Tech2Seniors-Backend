@@ -9,7 +9,7 @@ public class UserDTO implements Serializable{
 	
 	private String id;
 	private String name;
-	private String email;
+	private String caixaSujestao;
 	
 	public UserDTO() {
 	}
@@ -18,7 +18,7 @@ public class UserDTO implements Serializable{
 		
 		id = obj.getId();
 		name = obj.getName();
-		email = obj.getEmail();
+		caixaSujestao = obj.getCaixaSujestao();
 	}
 
 	public String getId() {
@@ -37,12 +37,13 @@ public class UserDTO implements Serializable{
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getCaixaSujestao() {
+		return caixaSujestao;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCaixaSujestao(String caixaSujestao) {
+		this.caixaSujestao = caixaSujestao;
 	}
+
 	
 }

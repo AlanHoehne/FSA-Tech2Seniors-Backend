@@ -15,19 +15,25 @@ public class User implements Serializable  {
 	@Id
 	private String id;
 	private String name;
-	private String email;
+	private String caixaSujestao;
 	
 	public User() {
 		
 	}
 
-
-	public User(String id, String name, String email) {
+	
+	
+	
+	
+	public User(String id, String name, String caixaSujestao) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.email = email;
+		this.caixaSujestao = caixaSujestao;
 	}
+
+
+
 
 
 	public String getId() {
@@ -35,9 +41,15 @@ public class User implements Serializable  {
 	}
 
 
+
+
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
+
+
 
 
 	public String getName() {
@@ -45,20 +57,38 @@ public class User implements Serializable  {
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+
+
+
+
+
+
+
+
+	public String getCaixaSujestao() {
+		return caixaSujestao;
 	}
 
 
-	public String getEmail() {
-		return email;
+
+
+
+	public void setCaixaSujestao(String caixaSujestao) {
+		this.caixaSujestao = caixaSujestao;
 	}
 
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
+	
+	
+	
 
+
+
+	public User(String id) {
+		super();
+		this.id = id;
+	}
 
 	@Override
 	public int hashCode() {
