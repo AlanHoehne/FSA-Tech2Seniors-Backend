@@ -8,7 +8,6 @@ public class UserDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private String id;
-	private String name;
 	private String caixaSujestao;
 	
 	public UserDTO() {
@@ -17,7 +16,6 @@ public class UserDTO implements Serializable{
 	public UserDTO(User obj) {
 		
 		id = obj.getId();
-		name = obj.getName();
 		caixaSujestao = obj.getCaixaSujestao();
 	}
 
@@ -29,13 +27,6 @@ public class UserDTO implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getCaixaSujestao() {
 		return caixaSujestao;

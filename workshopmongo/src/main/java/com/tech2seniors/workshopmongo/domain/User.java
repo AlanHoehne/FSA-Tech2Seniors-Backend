@@ -14,7 +14,6 @@ public class User implements Serializable  {
 	
 	@Id
 	private String id;
-	private String name;
 	private String caixaSujestao;
 	
 	public User() {
@@ -28,7 +27,6 @@ public class User implements Serializable  {
 	public User(String id, String name, String caixaSujestao) {
 		super();
 		this.id = id;
-		this.name = name;
 		this.caixaSujestao = caixaSujestao;
 	}
 
@@ -47,20 +45,6 @@ public class User implements Serializable  {
 	public void setId(String id) {
 		this.id = id;
 	}
-
-
-
-
-
-	public String getName() {
-		return name;
-	}
-
-
-
-
-
-
 
 
 
