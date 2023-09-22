@@ -50,7 +50,7 @@ public class UserService {
 
 	public User fromDTO(UserDTO objDto) {
 		
-		return new User(objDto.getId(), " ", objDto.getCaixaSujestao());
+		return new User(objDto.getId(),  objDto.getCaixaSujestao());
 		
 	}
 }
