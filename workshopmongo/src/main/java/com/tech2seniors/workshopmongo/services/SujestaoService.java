@@ -15,10 +15,10 @@ public class SujestaoService {
 	@Autowired
 	private SujestaoRepository repo;
 
-	
 	public Sujestao findById(String id) {
 		Optional<Sujestao> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
 	}
-
-}	
+	
+	
+}

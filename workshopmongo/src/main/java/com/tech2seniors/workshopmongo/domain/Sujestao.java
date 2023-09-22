@@ -24,7 +24,7 @@ public class Sujestao implements Serializable{
 		
 	}
 
-	public Sujestao(String id, Date date, String body, AuthorDTO author) {
+	public Sujestao(String id, Date date,String body,AuthorDTO author) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -40,13 +40,6 @@ public class Sujestao implements Serializable{
 		this.id = id;
 	}
 
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
 
 	public String getBody() {
 		return body;
@@ -56,6 +49,14 @@ public class Sujestao implements Serializable{
 		this.body = body;
 	}
 
+	
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
 
 	public AuthorDTO getAuthor() {
 		return author;
@@ -64,6 +65,8 @@ public class Sujestao implements Serializable{
 	public void setAuthor(AuthorDTO author) {
 		this.author = author;
 	}
+	
+
 
 	@Override
 	public int hashCode() {

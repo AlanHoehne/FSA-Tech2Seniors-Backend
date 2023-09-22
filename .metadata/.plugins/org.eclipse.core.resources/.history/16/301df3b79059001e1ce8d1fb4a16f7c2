@@ -1,0 +1,23 @@
+package com.tech2seniors.workshopmongo.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tech2seniors.workshopmongo.domain.User;
+import com.tech2seniors.workshopmongo.services.exception.ObjectNotFoundException;
+
+@Service
+public class SujestaoService {
+
+	@Autowired
+	private ServiceRepository repo;
+
+	public User findById(String id) {
+		Optional<Service> obj = repo.findById(id);
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
+	}
+	
+	
+}
