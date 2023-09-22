@@ -45,8 +45,8 @@ public class instantiation implements CommandLineRunner {
 		
 		sujestaoRepository.saveAll(Arrays.asList(sujestao1));
 		
-		
-		
+		bob.getSujestao().addAll(Arrays.asList(sujestao1));		
+		userRepository.save(bob);
 	}
 
 }
