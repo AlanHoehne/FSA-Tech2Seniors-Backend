@@ -7,6 +7,8 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.tech2seniors.workshopmongo.dto.AuthorDTO;
+
 @Document
 public class Sujestao implements Serializable{
 	
@@ -16,18 +18,18 @@ public class Sujestao implements Serializable{
 	public String id;
 	private Date date;
 	private String body;
-	private User user;
+	private AuthorDTO author;
 	
 	public Sujestao () {
 		
 	}
 
-	public Sujestao(String id, Date date, String body, User author) {
+	public Sujestao(String id, Date date, String body, AuthorDTO author) {
 		super();
 		this.id = id;
 		this.date = date;
 		this.body = body;
-		this.user = author;
+		this.author = author;
 	}
 
 	public String getId() {
@@ -54,6 +56,15 @@ public class Sujestao implements Serializable{
 		this.body = body;
 	}
 
+
+	public AuthorDTO getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(AuthorDTO author) {
+		this.author = author;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -71,13 +82,7 @@ public class Sujestao implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-	public User getUser() {
-		return user;
-	}
 
-	public void setUser(User user) {
-		this.user = user;
-	}
 	
 	
 	

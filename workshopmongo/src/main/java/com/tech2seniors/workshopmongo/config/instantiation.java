@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.tech2seniors.workshopmongo.domain.Sujestao;
 import com.tech2seniors.workshopmongo.domain.User;
+import com.tech2seniors.workshopmongo.dto.AuthorDTO;
 import com.tech2seniors.workshopmongo.repository.SujestaoRepository;
 import com.tech2seniors.workshopmongo.repository.UserRepository;
 
@@ -17,21 +18,32 @@ import com.tech2seniors.workshopmongo.repository.UserRepository;
 public class instantiation implements CommandLineRunner {
 	
 	@Autowired
-	private SujestaoRepository SujestaoRepository;
+	private UserRepository userRepository;
+	
+	@Autowired
+	private SujestaoRepository sujestaoRepository;
+
 	
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... arg0) throws Exception {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
 		
-		SujestaoRepository.deleteAll();
+		userRepository.deleteAll();
+		sujestaoRepository.deleteAll();
 		
 		User bob = new User(null, "bob@gmail.com");
+		User alex = new User(null, "alex@gmail.com");
+		User maria = new User(null,  "bob@gmail.com");
 		
-		Sujestao sujestao1 = new Sujestao(null, sdf.parse("21/03/2014"), "Eu quero que tenha no app blablabla", bob);
+		userRepository.saveAll(Arrays.asList(maria, alex, bob));
 		
-		SujestaoRepository.saveAll(Arrays.asList(sujestao1));
+		Sujestao sujestao1 = new Sujestao(null, sdf.parse("21/03/2014"), "Eu quero que tenha no app blablabla", new AuthorDTO(bob));
+		
+		
+		
+		sujestaoRepository.saveAll(Arrays.asList(sujestao1));
 		
 		
 		
